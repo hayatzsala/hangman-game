@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     Header.innerText = 'HangMan Game';
 
     const desc = document.createElement('p');
-    desc.innerText ='This Game Designed by Hayat & Zryan';
+    desc.innerHTML ='This Game Designed by Hayat & Zryan <br><br> Use the alphabet below to guess the word, or click hint to get a clue.';
 
     const alphabetDiv = document.createElement('div');
     alphabetDiv.id = "alphabets";
@@ -106,6 +106,8 @@ function parseWord(word){
                 if(correct === wordLength){
                     result.innerHTML = "<h3>YOU WIN!!</h3>";
                     disableButtons();
+                    document.body.style.backgroundColor = '#6efa6e';
+                    document.body.style.color = 'black';
                 }
             }
             else{
@@ -117,6 +119,8 @@ function parseWord(word){
                 if(livesCount===0){
                     result.innerHTML = "<h3>GAME OVER!</h3>";
                     disableButtons();
+                    document.body.style.backgroundColor = '#b35858';
+                    document.body.style.color = 'black';
                 }
             }
             btn.disabled = true;
@@ -144,6 +148,8 @@ function PlayAgain(){
     livesCount = 10;
     const result = document.getElementById('result');
     result.innerHTML = "<h3></h3>";
+    document.body.style.backgroundColor = '#001881';
+    document.body.style.color = 'white';
     startGame();
 }
 

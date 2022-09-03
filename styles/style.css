@@ -1,0 +1,30 @@
+body{
+    background-color: #001881;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+button:disabled{
+    color: white;
+}
+
+input{
+    width: 140px;
+    height: 40px;
+    margin: 3px;
+    font-size: large;
+    font-weight: bold;
+}
+div#result span{
+    margin: 5px;
+    width: max-content;
+    font-size: larger;
+}
